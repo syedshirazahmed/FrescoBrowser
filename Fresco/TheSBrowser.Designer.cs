@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnNavigate = new System.Windows.Forms.Button();
+            this.txtUrl = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Browser = new System.Windows.Forms.WebBrowser();
             this.btn_InjectJS = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,28 @@
             this.panel1.Size = new System.Drawing.Size(958, 35);
             this.panel1.TabIndex = 0;
             // 
+            // btnNavigate
+            // 
+            this.btnNavigate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNavigate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNavigate.Location = new System.Drawing.Point(819, 0);
+            this.btnNavigate.Name = "btnNavigate";
+            this.btnNavigate.Size = new System.Drawing.Size(139, 35);
+            this.btnNavigate.TabIndex = 2;
+            this.btnNavigate.Text = "Navigate";
+            this.btnNavigate.UseVisualStyleBackColor = true;
+            this.btnNavigate.Click += new System.EventHandler(this.btnNavigate_Click);
+            // 
+            // txtUrl
+            // 
+            this.txtUrl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUrl.Location = new System.Drawing.Point(58, 5);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(755, 22);
+            this.txtUrl.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -65,28 +87,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "URL:";
             // 
-            // txtUrl
-            // 
-            this.txtUrl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUrl.Location = new System.Drawing.Point(58, 5);
-            this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(755, 22);
-            this.txtUrl.TabIndex = 1;
-            // 
-            // btnNavigate
-            // 
-            this.btnNavigate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNavigate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNavigate.Location = new System.Drawing.Point(819, 0);
-            this.btnNavigate.Name = "btnNavigate";
-            this.btnNavigate.Size = new System.Drawing.Size(139, 35);
-            this.btnNavigate.TabIndex = 2;
-            this.btnNavigate.Text = "Navigate";
-            this.btnNavigate.UseVisualStyleBackColor = true;
-            this.btnNavigate.Click += new System.EventHandler(this.btnNavigate_Click);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -96,36 +96,35 @@
             this.panel2.Controls.Add(this.btn_InjectJS);
             this.panel2.Location = new System.Drawing.Point(0, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(958, 32);
+            this.panel2.Size = new System.Drawing.Size(958, 40);
             this.panel2.TabIndex = 1;
-            // 
-            // Browser
-            // 
-            this.Browser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Browser.Location = new System.Drawing.Point(0, 76);
-            this.Browser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.Browser.Name = "Browser";
-            this.Browser.Size = new System.Drawing.Size(958, 429);
-            this.Browser.TabIndex = 2;
             // 
             // btn_InjectJS
             // 
             this.btn_InjectJS.Location = new System.Drawing.Point(212, 3);
             this.btn_InjectJS.Name = "btn_InjectJS";
-            this.btn_InjectJS.Size = new System.Drawing.Size(152, 25);
+            this.btn_InjectJS.Size = new System.Drawing.Size(152, 34);
             this.btn_InjectJS.TabIndex = 0;
             this.btn_InjectJS.Text = "Inject The Magic";
             this.btn_InjectJS.UseVisualStyleBackColor = true;
             this.btn_InjectJS.Click += new System.EventHandler(this.btn_InjectJS_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Location = new System.Drawing.Point(0, 84);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(958, 423);
+            this.panel3.TabIndex = 2;
             // 
             // TheSBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 508);
-            this.Controls.Add(this.Browser);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "TheSBrowser";
@@ -144,8 +143,8 @@
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.WebBrowser Browser;
         private System.Windows.Forms.Button btn_InjectJS;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
